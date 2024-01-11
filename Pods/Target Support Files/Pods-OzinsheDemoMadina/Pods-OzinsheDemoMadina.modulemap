@@ -1,0 +1,6 @@
+framework module Pods_OzinsheDemoMadina {
+  umbrella header "Pods-OzinsheDemoMadina-umbrella.h"
+
+  export *
+  module * { export * }
+}
