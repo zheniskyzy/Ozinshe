@@ -44,6 +44,8 @@ class ProfileViewController: UIViewController, LanguageProtocol{
         conditionsButton.setTitle("TERMS_AND_CONDITIONS".localized(), for: .normal)
         announcementsButton.setTitle("ANNOUNCEMENTS".localized(), for: .normal)
         darkmodeButton.setTitle("DARK_MODE".localized(), for: .normal)
+        navigationItem.title = "PROFILE".localized()
+//        title = "PROFILE".localized()
         
         
         if Localize.currentLanguage() == "ru"{

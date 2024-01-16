@@ -77,6 +77,8 @@ class PersonalInfoViewController: UIViewController {
     
     @objc func closeView() {
            self.dismiss(animated: true, completion: nil)
+        let profileVC = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        navigationController?.show(profileVC, sender: self)
        }
     
     func configureViews(){
