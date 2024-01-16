@@ -7,3 +7,18 @@
 */
 "MY_PROFILE" = "Мой профиль";
 "LANGUAGE" = "Язык";
+"PERSONAL_INFO" = "Персональная информация";
+"YOUR_NAME" = "Ваше имя";
+"BIRTH_DATE" = "Дата рождения";
+"SAVE_CHANGES" = "Сохранить изменения";
+"EXIST" = "Выход";
+"EXIST_SUBTITLE" = "Ты действительно хочешь выйти со своего аккаунта";
+"YES" = "Да, выйти";
+"NO" = "Нет";
+"CHANGE" = "Изменить";
+"CHANGE_PASSWORD" = "Изменить пароль";
+"TERMS_AND_CONDITIONS" = "Условия и положения";
+"ANNOUNCEMENTS" = "Уведомления";
+"DARK_MODE" = "Темный режим";
+"REPEAT_PASSWORD" = "Повторите пароль";
+"YOUR_PASSWORD" = "Ваш пароль";
