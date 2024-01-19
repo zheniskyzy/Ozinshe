@@ -17,6 +17,7 @@
 "EXIST_SUBTITLE" = "Do you really want to log out of your account?";
 "YES" = "Yes, exist";
 "NO" = "No";
+"PASSWORD" = "Password";
 "CHANGE" = "Change";
 "CHANGE_PASSWORD" = "Change password";
 "TERMS_AND_CONDITIONS" = "Terms and conditions";
@@ -24,3 +25,12 @@
 "DARK_MODE" = "Dark mode";
 "REPEAT_PASSWORD" = "Repeat password";
 "YOUR_PASSWORD" = "Your password";
+"CONNECTION_ERROR" = "Connection error";
+"HELLO" = "Hello!";
+"SIGN_INTO_YOUR_ACCOUNT" = "Sign in to your account";
+"DONT_HAVE_AN_ACCAOUNT?" = "Don't have an account?";
+"REGISTRATION" = "Registration";
+"YOUR_EMAIL" = "Your email";
+"SIGN_IN" = "Sign in";
+"DO_YOU_HAVE_AN_ACC" = "Do you have an account?";
+"FILL_IN_THE_DATA" = "Fill in the data";

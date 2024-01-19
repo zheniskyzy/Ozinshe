@@ -22,12 +22,16 @@ class ProfileViewController: UIViewController, LanguageProtocol{
     @IBOutlet weak var announcementsButton: UIButton!
     @IBOutlet weak var darkmodeButton: UIButton!
     
+    @IBOutlet weak var myEmailLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let email = UserDefaults.standard.string(forKey: "email"){
+            myEmailLabel.text = email
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

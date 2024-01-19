@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
@@ -13,7 +14,6 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var yearLabel: UILabel!
     
     @IBOutlet weak var posterImageView: UIImageView!
-    
     
     @IBOutlet weak var playView: UIView!
     
@@ -30,7 +30,9 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setData(movie: String){
-        posterImageView.image = UIImage(named: movie)
+    func setData(movie: Movie){
+        posterImageView.sd_setImage(with: URL(string: movie.poster_link), completed: nil)
+        nameLabel.text = movie.name
+        yearLabel.text = "\(movie.year)"
     }
 }

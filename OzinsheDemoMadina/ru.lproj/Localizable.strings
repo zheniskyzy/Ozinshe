@@ -16,6 +16,7 @@
 "EXIST_SUBTITLE" = "Ты действительно хочешь выйти со своего аккаунта";
 "YES" = "Да, выйти";
 "NO" = "Нет";
+"PASSWORD" = "Пароль";
 "CHANGE" = "Изменить";
 "CHANGE_PASSWORD" = "Изменить пароль";
 "TERMS_AND_CONDITIONS" = "Условия и положения";
@@ -23,3 +24,12 @@
 "DARK_MODE" = "Темный режим";
 "REPEAT_PASSWORD" = "Повторите пароль";
 "YOUR_PASSWORD" = "Ваш пароль";
+"CONNECTION_ERROR" = "Ошибка соединения";
+"HELLO" = "Здравствуйте!";
+"SIGN_INTO_YOUR_ACCOUNT" = "Войдите в свой аккаунт";
+"DONT_HAVE_AN_ACCAOUNT?" = "У вас нет учетной записи?";
+"REGISTRATION" = "Регистрация";
+"YOUR_EMAIL" = "Ваш email";
+"SIGN_IN" = "Войти";
+"DO_YOU_HAVE_AN_ACC" = "У тебя есть аккаунт?";
+"FILL_IN_THE_DATA" = "Заполните данные";

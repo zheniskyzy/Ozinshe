@@ -16,6 +16,7 @@
 "EXIST_SUBTITLE" = "Сіз шынымен аккаунтыныздан?";
 "YES" = "Иә, шығу";
 "NO" = "Жоқ";
+"PASSWORD" = "Құпия сөз";
 "CHANGE" = "Өңдеу";
 "CHANGE_PASSWORD" = "Құпия сөзді өзгерту";
 "TERMS_AND_CONDITIONS" = "Ережелер мен шарттар";
@@ -23,3 +24,12 @@
 "DARK_MODE" = "Қараңғы режим";
 "REPEAT_PASSWORD" = "Құпия сөзді қайталаңыз";
 "YOUR_PASSWORD" = "Сіздің құпия сөзіңіз";
+"CONNECTION_ERROR" = "Қосылым қатесі";
+"HELLO" = "Сәлем!";
+"SIGN_INTO_YOUR_ACCOUNT" = "Аккаунтқа кіріңіз";
+"DONT_HAVE_AN_ACCAOUNT?" = "Аккаунтыныз жоқ па?";
+"REGISTRATION" = "Тіркелу";
+"YOUR_EMAIL" = "Сіздің email";
+"SIGN_IN" = "Кіру";
+"DO_YOU_HAVE_AN_ACC" = "Сізде аккаунт бар ма?";
+"FILL_IN_THE_DATA" = "Деректерді толтырыңыз";

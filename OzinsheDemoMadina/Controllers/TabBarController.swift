@@ -26,7 +26,8 @@ class TabBarController: UITabBarController {
         tabBar.items?[2].selectedImage = favoriteselectedimage
         tabBar.items?[3].selectedImage = profileselectedimage
     }
-
+    
+    
     /*
     // MARK: - Navigation
 
