@@ -1,42 +1,43 @@
 //
-//  FavoriteTableViewController.swift
+//  CategoryTableViewController.swift
 //  OzinsheDemoMadina
 //
-//  Created by Madina Olzhabek on 09.01.2024.
+//  Created by Madina Olzhabek on 21.01.2024.
 //
 
 import UIKit
-import SVProgressHUD
 import Alamofire
+import SVProgressHUD
 import SwiftyJSON
 
-class FavoriteTableViewController: UITableViewController {
+class CategoryTableViewController: UITableViewController {
+
+    var categoryID = 0
     
-    var favorites: [Movie] = []
+    var movies:[Movie] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let MovieCellnib = UINib(nibName: "MovieCell", bundle: nil)
-           tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
+
+     let MovieCellnib = UINib(nibName: "MovieCell", bundle: nil)
+        tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
         
-        downloadFavorites()
+        downlaodMoviesByCategory()
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        configureView()
-    }
     
-    func configureView(){
-        navigationItem.title = "FAVORITE".localized()
-    }
-    
-    func downloadFavorites(){
+
+    func downlaodMoviesByCategory(){
         SVProgressHUD.show()
+        
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(Storage.sharedInstance.accessToken)"
         ]
+        let parameters = ["categoryId": categoryID]
         
-        AF.request(Urls.FAVORITE_URL, method: .get, headers: headers).responseData { response in
+        AF.request(Urls.MOVIES_BY_CATEGORY_URL, method: .get, parameters: parameters, headers: headers).responseData { response in
             SVProgressHUD.dismiss()
             var resultString = ""
             if let data = response.data{
@@ -48,49 +49,60 @@ class FavoriteTableViewController: UITableViewController {
                 let json = JSON(response.data!)
                     print("JSON: \(json)")
                     
-                    if let array = json.array{
+                if json["content"].exists(){
+                    if let array = json["content"].array{
                         for item in array{
                             let movie = Movie(json: item)
-                            self.favorites.append(movie)
+                            self.movies.append(movie)
                         }
+                        
+                        
                         self.tableView.reloadData()
+                     }
                     }else{
                         SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
                     }
                 
                 
+            }else{
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode{
+                    ErrorString = ErrorString + "\(sCode)"
+                }
+                ErrorString = ErrorString + "\(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
             }
         }
-        
     }
-
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+       // #warning Incomplete implementation, return the number of sections
+       return 1
+   }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return favorites.count
-    }
+       // #warning Incomplete implementation, return the number of rows
+       return movies.count
+   }
 
-    
+   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
-        // Configure the cell...
-    
-        cell.setData(movie: favorites[indexPath.row])
-        
-        
-        return cell
-    }
-    
+       let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
+       // Configure the cell...
+   
+       cell.setData(movie: movies[indexPath.row])
+       
+       
+       return cell
+   }
+   
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        153
-    }
-    
+       153
+   }
+   
 
     /*
     // Override to support conditional editing of the table view.

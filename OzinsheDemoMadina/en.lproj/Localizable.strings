@@ -32,5 +32,10 @@
 "REGISTRATION" = "Registration";
 "YOUR_EMAIL" = "Your email";
 "SIGN_IN" = "Sign in";
+"SEARCH" = "Search";
+"CATEGORIES" = "Categories";
 "DO_YOU_HAVE_AN_ACC" = "Do you have an account?";
 "FILL_IN_THE_DATA" = "Fill in the data";
+"PLAY" = "Play";
+"SEARCH_RESULT" = "Search result";
+"FAVORITE" = "Favorite";

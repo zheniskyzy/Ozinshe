@@ -33,3 +33,8 @@
 "SIGN_IN" = "Кіру";
 "DO_YOU_HAVE_AN_ACC" = "Сізде аккаунт бар ма?";
 "FILL_IN_THE_DATA" = "Деректерді толтырыңыз";
+"SEARCH" = "Іздеу";
+"CATEGORIES" = "Санаттар";
+"PLAY" = "Қарау";
+"SEARCH_RESULT" = "Іздеу нәтижелері";
+"FAVORITE" = "Тізім";

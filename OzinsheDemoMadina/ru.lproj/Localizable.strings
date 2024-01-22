@@ -31,5 +31,10 @@
 "REGISTRATION" = "Регистрация";
 "YOUR_EMAIL" = "Ваш email";
 "SIGN_IN" = "Войти";
+"SEARCH" = "Поиск";
+"CATEGORIES" = "Категории";
 "DO_YOU_HAVE_AN_ACC" = "У тебя есть аккаунт?";
 "FILL_IN_THE_DATA" = "Заполните данные";
+"PLAY" = "Смотреть";
+"SEARCH_RESULT" = "Результаты поиска";
+"FAVORITE" = "Избранное";
