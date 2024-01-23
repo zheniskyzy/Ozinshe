@@ -16,6 +16,9 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var playLabel: UILabel!
     
+    var movie:[Movie] = []
+    var genreName = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,7 +39,9 @@ class MovieTableViewCell: UITableViewCell {
     func setData(movie: Movie){
         posterImageView.sd_setImage(with: URL(string: movie.poster_link), completed: nil)
         nameLabel.text = movie.name
-        yearLabel.text = "\(movie.year)"
+        
+         yearLabel.text = "\(movie.year) •\(movie.movieType)"
+        
     }
     
     func configureViews(){

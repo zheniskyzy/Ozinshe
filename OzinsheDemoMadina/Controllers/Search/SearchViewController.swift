@@ -10,6 +10,8 @@ import SwiftyJSON
 import Alamofire
 import SVProgressHUD
 
+
+
 class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {

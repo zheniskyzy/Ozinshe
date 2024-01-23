@@ -29,7 +29,7 @@ class Movie{
     public var lastModifiedDate: String = ""
     public var screenshots: [Screenshot] = []
     public var categoryAge: [CategoryAge] = []
-    public var genre: [Genre] = []
+    public var genres: [Genre] = []
     public var category: [Category] = []
     public var favorite: Bool = false
     
@@ -65,10 +65,10 @@ class Movie{
         if let temp = json["producer"].string{
             self.producer = temp
         }
-        if let temp = json["poster_link"].string{
+        if let temp = json["poster"]["link"].string{
             self.poster_link = temp
         }
-        if let temp = json["video_link"].string{
+        if let temp = json["video"]["link"].string{
             self.video_link = temp
         }
         if let temp = json["watchCount"].int{
@@ -98,10 +98,10 @@ class Movie{
                 self.categoryAge.append(temp)
             }
         }
-        if let array = json["genre"].array{
+        if let array = json["genres"].array{
             for item in array{
                 let temp = Genre(json: item)
-                self.genre.append(temp)
+                self.genres.append(temp)
             }
         }
         if let array = json["category"].array{

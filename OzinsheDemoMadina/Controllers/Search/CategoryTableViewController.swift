@@ -13,13 +13,14 @@ import SwiftyJSON
 class CategoryTableViewController: UITableViewController {
 
     var categoryID = 0
-    
+    var categoryName = ""
     var movies:[Movie] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = categoryName
      let MovieCellnib = UINib(nibName: "MovieCell", bundle: nil)
         tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
         
