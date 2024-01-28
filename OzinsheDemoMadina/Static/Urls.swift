@@ -19,4 +19,8 @@ class Urls{
     static let MOVIES_BY_CATEGORY_URL = BASE_URL + "movies/page"
     static let SEARCH_MOVIES_URL = BASE_URL + "movies/search"
     static let MAIN_MOVIES_URL = BASE_URL + "movies/main"
+    static let MAIN_BANNERS_URL = BASE_URL + "movies_main"
+    static let USER_HISTORY_URL = BASE_URL + "history/userHistory"
+    static let GET_GENRES_URL = BASE_URL + "genres"
+    static let GET_AGES_URL = BASE_URL + "category-ages"
 }

@@ -28,11 +28,15 @@ class Movie{
     public var createdDate: String = ""
     public var lastModifiedDate: String = ""
     public var screenshots: [Screenshot] = []
-    public var categoryAge: [CategoryAge] = []
+    public var categoryAges: [CategoryAge] = []
     public var genres: [Genre] = []
-    public var category: [Category] = []
+    public var categories: [Category] = []
     public var favorite: Bool = false
     
+    
+    init(){
+        
+    }
     
     init(json: JSON){
         if let temp = json["id"].int{
@@ -65,12 +69,17 @@ class Movie{
         if let temp = json["producer"].string{
             self.producer = temp
         }
-        if let temp = json["poster"]["link"].string{
-            self.poster_link = temp
+        if json["poster"].exists(){
+            if let temp = json["poster"]["link"].string{
+                self.poster_link = temp
+            }
         }
-        if let temp = json["video"]["link"].string{
-            self.video_link = temp
+        if json["video"].exists(){
+            if let temp = json["video"]["link"].string{
+                self.video_link = temp
+            }
         }
+      
         if let temp = json["watchCount"].int{
             self.watchCount = temp
         }
@@ -92,10 +101,10 @@ class Movie{
                 self.screenshots.append(temp)
             }
         }
-        if let array = json["categoryAge"].array{
+        if let array = json["categoryAges"].array{
             for item in array{
                 let temp = CategoryAge(json: item)
-                self.categoryAge.append(temp)
+                self.categoryAges.append(temp)
             }
         }
         if let array = json["genres"].array{
@@ -104,10 +113,11 @@ class Movie{
                 self.genres.append(temp)
             }
         }
-        if let array = json["category"].array{
+        if let array = json["categories"].array{
+            
             for item in array{
                 let temp = Category(json: item)
-                self.category.append(temp)
+                self.categories.append(temp)
             }
         }
         if let temp = json["favorite"].bool{

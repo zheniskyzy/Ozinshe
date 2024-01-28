@@ -86,6 +86,11 @@ class SignInViewController: UIViewController {
         let email = emailTextField.text!
         let password = passwordTextField.text!
         
+        // что бы нельзя было нажать на кнопку войти без ввода логина и пароля
+        if email.isEmpty || password.isEmpty{
+            return
+        }
+        
         SVProgressHUD.show()
         
         let parameters = ["email": email, "password": password]
