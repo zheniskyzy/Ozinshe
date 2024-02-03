@@ -37,20 +37,13 @@ class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource{
     
-    
-   
-    
-
     @IBOutlet weak var searchTextField: TextFieldWithPadding!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
-    
-   
     @IBOutlet weak var tableViewToLabelConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var tableViewCollectionConstraint: NSLayoutConstraint!
     
     var categories: [Category] = []
@@ -62,6 +55,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         configureViews()
         downloadCategories()
+        clearButton.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -73,11 +67,11 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
     }
     
+
+    
     // MARK: - Configure Views
     
     func configureViews(){
-        
-       
         
         //collectionView
         collectionView.dataSource = self
@@ -105,8 +99,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
            tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
         
     }
-    
-    
     
     @IBAction func textFieldEditingDidBegin(_ sender: TextFieldWithPadding) {
         sender.layer.borderColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00).cgColor
@@ -174,8 +166,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
                         ErrorString = ErrorString + "\(resultString)"
                         SVProgressHUD.showError(withStatus: "\(ErrorString)")
                     }
-                
-                
             }
         }
     }
@@ -184,7 +174,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     func downloadSearchMovies(){
     
         if searchTextField.text!.isEmpty{
-            topLabel.text = "Санаттар"
+            topLabel.text = "CATEGORIES".localized()
             collectionView.isHidden = false
             tableViewToLabelConstraint.priority = .defaultLow
             tableViewCollectionConstraint.priority = .defaultHigh
@@ -200,6 +190,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
             tableViewCollectionConstraint.priority = .defaultLow
             tableView.isHidden = false
             clearButton.isHidden = false
+           
         }
         SVProgressHUD.show()
         
@@ -267,9 +258,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         categoryTableViewController.categoryID = categories[indexPath.row].id
         categoryTableViewController.navigationItem.title = categories[indexPath.row].name
         navigationController?.show(categoryTableViewController, sender: self)
-        
-        
-    
     }
     
     //MARK: - tableView
@@ -300,16 +288,12 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         153
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieinfoVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as! MovieInfoViewController
+        
+        movieinfoVC.movie  = movies[indexPath.row]
+        
+        navigationController?.show(movieinfoVC, sender: self)
     }
-    */
 
 }

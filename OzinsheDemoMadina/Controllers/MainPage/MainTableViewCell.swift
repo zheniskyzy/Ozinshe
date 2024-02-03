@@ -38,6 +38,9 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
    
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var moreLabel: UILabel!
+    
     var mainMovie = MainMovies()
     
     override func awakeFromNib() {
@@ -45,6 +48,8 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         // Initialization code
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        configureView()
         
         let layout = TopAlignedCollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 24.0, bottom: 0, right: 24.0)
@@ -59,7 +64,15 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         collectionView.collectionViewLayout = layout
         
     }
+    
+    override func prepareForReuse() {
+        configureView()
+    }
 
+    func configureView(){
+        moreLabel.text = "MORE".localized()
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

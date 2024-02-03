@@ -136,7 +136,7 @@ class SignInViewController: UIViewController {
         let personalInfoVC = storyboard?.instantiateViewController(withIdentifier: "PersonalInfoViewController") as! PersonalInfoViewController
         
         var name = ""
-        var email = emailTextField.text!
+        let email = emailTextField.text!
         
         for i in email {
             if i == "@"{

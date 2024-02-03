@@ -23,4 +23,6 @@ class Urls{
     static let USER_HISTORY_URL = BASE_URL + "history/userHistory"
     static let GET_GENRES_URL = BASE_URL + "genres"
     static let GET_AGES_URL = BASE_URL + "category-ages"
+    static let GET_SIMILAR = BASE_URL + "movies/similar/"
+    static let GET_SEASONS = BASE_URL + "seasons/"
 }

@@ -28,7 +28,9 @@ class MovieTableViewCell: UITableViewCell {
         configureViews()
     }
     
-    
+    override func prepareForReuse() {
+        configureViews()
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

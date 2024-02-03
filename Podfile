@@ -11,4 +11,6 @@ target 'OzinsheDemoMadina' do
   pod 'SwiftyJSON'
   pod 'SDWebImage'
   pod 'Localize-Swift'
+  pod 'YouTubePlayer'
+  pod "XCDYouTubeKit"
 end

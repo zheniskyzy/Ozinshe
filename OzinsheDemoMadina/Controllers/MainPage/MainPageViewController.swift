@@ -13,8 +13,6 @@ import SwiftyJSON
 
 class MainPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-   
-    
 
     @IBOutlet weak var tableview: UITableView!
     var mainMovies: [MainMovies] = []
@@ -27,6 +25,11 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         
         addNavBarImage()
         downloadMainBanners()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableview.reloadData()
+        
     }
     
     // почему- то картинка сжатая какая-то, скачивала все верно как обычно вроде
@@ -337,14 +340,13 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.show(categoryTableViewController, sender: self)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // кликабельность и переход
+    func movieDidSelect(movie: Movie) {
+        let movieinfoVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as! MovieInfoViewController
+        
+        movieinfoVC.movie  = movie
+        
+        navigationController?.show(movieinfoVC, sender: self)
     }
-    */
 
 }

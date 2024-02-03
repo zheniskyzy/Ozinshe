@@ -19,6 +19,12 @@ class GenreAgeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
         // Initialization code
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        configureView()
+    }
+    
+    override func prepareForReuse() {
+        configureView()
     }
     
     func setData(mainMovie: MainMovies){
@@ -30,6 +36,15 @@ class GenreAgeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureView(){
+        if mainMovies.cellType == .ageCategory{
+            titleLabel.text = "APPROPIATE_FOR_AGE".localized()
+        }else{
+            titleLabel.text = "CHOOSE_A_GENRE".localized()
+        }
+        
     }
     
     //MARK: - collectionView

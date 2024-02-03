@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController, LanguageProtocol{
     
     @IBOutlet weak var myEmailLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -94,6 +93,11 @@ class ProfileViewController: UIViewController, LanguageProtocol{
     func languageDidChange() {
         configureViews()
     }
+   
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation

@@ -12,6 +12,7 @@
 		D434B3E02B583BC7002D908A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434B3DF2B583BC7002D908A /* SignInViewController.swift */; };
 		D434B3E32B5875FD002D908A /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434B3E22B5875FD002D908A /* Urls.swift */; };
 		D434B3E62B587D92002D908A /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434B3E52B587D92002D908A /* Storage.swift */; };
+		D43F53FD2B6CB8C4008F46CD /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F53FC2B6CB8C4008F46CD /* Season.swift */; };
 		D4400A992B4ECF2800ECA1CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4400A9B2B4ECF2800ECA1CE /* Localizable.strings */; };
 		D444C58F2B61A60C003EEB30 /* BannerMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444C58E2B61A60C003EEB30 /* BannerMovie.swift */; };
 		D444C5912B61ADE5003EEB30 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444C5902B61ADE5003EEB30 /* HistoryTableViewCell.swift */; };
@@ -20,6 +21,11 @@
 		D462F24D2B570C6C007F9F35 /* ExistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462F24C2B570C6C007F9F35 /* ExistViewController.swift */; };
 		D462F2502B5714F7007F9F35 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462F24F2B5714F7007F9F35 /* ChangePasswordViewController.swift */; };
 		D47116252B61A1F500CDC23C /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47116242B61A1F500CDC23C /* BannerCollectionViewCell.swift */; };
+		D471EC652B6AA8F200F72A11 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471EC642B6AA8F200F72A11 /* GradientView.swift */; };
+		D471EC692B6AE11100F72A11 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471EC682B6AE11100F72A11 /* MovieInfoViewController.swift */; };
+		D471EC6B2B6C558B00F72A11 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471EC6A2B6C558B00F72A11 /* Label.swift */; };
+		D471EC6F2B6C591800F72A11 /* MoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471EC6E2B6C591800F72A11 /* MoviePlayerViewController.swift */; };
+		D471EC722B6C599600F72A11 /* SeasonsSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471EC712B6C599600F72A11 /* SeasonsSeriesViewController.swift */; };
 		D47C7D7F2B619D5F0054655D /* MainBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C7D7E2B619D5F0054655D /* MainBannerTableViewCell.swift */; };
 		D49127FE2B4BDFEA007AF1A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49127FD2B4BDFEA007AF1A3 /* AppDelegate.swift */; };
 		D49128002B4BDFEA007AF1A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49127FF2B4BDFEA007AF1A3 /* SceneDelegate.swift */; };
@@ -56,6 +62,7 @@
 		D434B3DF2B583BC7002D908A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D434B3E22B5875FD002D908A /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		D434B3E52B587D92002D908A /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		D43F53FC2B6CB8C4008F46CD /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		D4400A9A2B4ECF2800ECA1CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D4400A9D2B4ECF2C00ECA1CE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D444C58E2B61A60C003EEB30 /* BannerMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerMovie.swift; sourceTree = "<group>"; };
@@ -66,6 +73,11 @@
 		D462F24E2B571411007F9F35 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D462F24F2B5714F7007F9F35 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D47116242B61A1F500CDC23C /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		D471EC642B6AA8F200F72A11 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		D471EC682B6AE11100F72A11 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		D471EC6A2B6C558B00F72A11 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		D471EC6E2B6C591800F72A11 /* MoviePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerViewController.swift; sourceTree = "<group>"; };
+		D471EC712B6C599600F72A11 /* SeasonsSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsSeriesViewController.swift; sourceTree = "<group>"; };
 		D47C7D7E2B619D5F0054655D /* MainBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerTableViewCell.swift; sourceTree = "<group>"; };
 		D49127FA2B4BDFEA007AF1A3 /* OzinsheDemoMadina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OzinsheDemoMadina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49127FD2B4BDFEA007AF1A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				D434B3D92B581BC6002D908A /* TextFieldWithPadding.swift */,
+				D471EC642B6AA8F200F72A11 /* GradientView.swift */,
+				D471EC6A2B6C558B00F72A11 /* Label.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -139,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				D4D3DC952B4C83C300CCCAA8 /* FavoriteTableViewController.swift */,
-				D4D3DC972B4C864A00CCCAA8 /* MovieTableViewCell.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -170,6 +183,39 @@
 				D434B3E52B587D92002D908A /* Storage.swift */,
 			);
 			path = SharedInstance;
+			sourceTree = "<group>";
+		};
+		D471EC662B6AE0D100F72A11 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC7BEF2B5C775100E5EC7A /* MovieCell.xib */,
+				D4D3DC972B4C864A00CCCAA8 /* MovieTableViewCell.swift */,
+			);
+			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		D471EC672B6AE0F500F72A11 /* MovieInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D471EC682B6AE11100F72A11 /* MovieInfoViewController.swift */,
+			);
+			path = MovieInfo;
+			sourceTree = "<group>";
+		};
+		D471EC6D2B6C58EE00F72A11 /* MoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D471EC6E2B6C591800F72A11 /* MoviePlayerViewController.swift */,
+			);
+			path = MoviePlayer;
+			sourceTree = "<group>";
+		};
+		D471EC702B6C596900F72A11 /* Seasons and Series */ = {
+			isa = PBXGroup;
+			children = (
+				D471EC712B6C599600F72A11 /* SeasonsSeriesViewController.swift */,
+			);
+			path = "Seasons and Series";
 			sourceTree = "<group>";
 		};
 		D49127F12B4BDFEA007AF1A3 = {
@@ -238,9 +284,12 @@
 			children = (
 				D434B3DF2B583BC7002D908A /* SignInViewController.swift */,
 				D461ABF32B66FFF700339984 /* OnboardingViewController.swift */,
-				D4EA1B8A2B599CB3004DD712 /* RegistrationViewController.swift */,
-				D4DC7BEF2B5C775100E5EC7A /* MovieCell.xib */,
 				D4D3DC782B4C636B00CCCAA8 /* TabBarController.swift */,
+				D4EA1B8A2B599CB3004DD712 /* RegistrationViewController.swift */,
+				D471EC702B6C596900F72A11 /* Seasons and Series */,
+				D471EC6D2B6C58EE00F72A11 /* MoviePlayer */,
+				D471EC672B6AE0F500F72A11 /* MovieInfo */,
+				D471EC662B6AE0D100F72A11 /* MovieCell */,
 				D4AC32F22B5FD37B007775FA /* MainPage */,
 				D434B3DB2B5839C3002D908A /* Favorites */,
 				D434B3DC2B583A09002D908A /* Profile */,
@@ -266,6 +315,7 @@
 				D4EA1B842B58DD27004DD712 /* CategoryAge.swift */,
 				D4EA1B862B58DD35004DD712 /* Genre.swift */,
 				D4EA1B882B58DD45004DD712 /* Category.swift */,
+				D43F53FC2B6CB8C4008F46CD /* Season.swift */,
 				D4AC32F02B5F13EA007775FA /* MainMovies.swift */,
 				D444C58E2B61A60C003EEB30 /* BannerMovie.swift */,
 			);
@@ -395,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D3DC962B4C83C300CCCAA8 /* FavoriteTableViewController.swift in Sources */,
+				D43F53FD2B6CB8C4008F46CD /* Season.swift in Sources */,
 				D4D43B1A2B61B2450078CB6E /* GenreAgeTableViewCell.swift in Sources */,
 				D462F24D2B570C6C007F9F35 /* ExistViewController.swift in Sources */,
 				D444C58F2B61A60C003EEB30 /* BannerMovie.swift in Sources */,
@@ -408,14 +459,19 @@
 				D4EA1B872B58DD35004DD712 /* Genre.swift in Sources */,
 				D4AC32F12B5F13EA007775FA /* MainMovies.swift in Sources */,
 				D434B3E02B583BC7002D908A /* SignInViewController.swift in Sources */,
+				D471EC6B2B6C558B00F72A11 /* Label.swift in Sources */,
 				D4AC32F42B5FD3A4007775FA /* MainTableViewCell.swift in Sources */,
 				D4D3DC792B4C636B00CCCAA8 /* TabBarController.swift in Sources */,
 				D4ACE9722B4EFEA5006D7A11 /* ProfileViewController.swift in Sources */,
+				D471EC722B6C599600F72A11 /* SeasonsSeriesViewController.swift in Sources */,
 				D4EA1B892B58DD45004DD712 /* Category.swift in Sources */,
 				D49127FE2B4BDFEA007AF1A3 /* AppDelegate.swift in Sources */,
+				D471EC6F2B6C591800F72A11 /* MoviePlayerViewController.swift in Sources */,
 				D4EA1B832B58DD14004DD712 /* Screenshot.swift in Sources */,
 				D4EA1B852B58DD27004DD712 /* CategoryAge.swift in Sources */,
 				D47116252B61A1F500CDC23C /* BannerCollectionViewCell.swift in Sources */,
+				D471EC652B6AA8F200F72A11 /* GradientView.swift in Sources */,
+				D471EC692B6AE11100F72A11 /* MovieInfoViewController.swift in Sources */,
 				D4DC7BEC2B5C716800E5EC7A /* CategoryTableViewController.swift in Sources */,
 				D461ABF42B66FFF700339984 /* OnboardingViewController.swift in Sources */,
 				D4DC7BEA2B5C563900E5EC7A /* SearchViewController.swift in Sources */,

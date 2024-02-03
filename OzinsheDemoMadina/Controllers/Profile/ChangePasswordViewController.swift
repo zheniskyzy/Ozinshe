@@ -13,8 +13,8 @@ import SVProgressHUD
 class ChangePasswordViewController: UIViewController {
 
     @IBOutlet weak var repeatpasswordLabel: UILabel!
-    @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var repeatpasswordTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: TextFieldWithPadding!
+    @IBOutlet weak var repeatpasswordTextfield: TextFieldWithPadding!
     @IBOutlet weak var savechangesButton: UIButton!
     
     
@@ -33,6 +33,14 @@ class ChangePasswordViewController: UIViewController {
         passwordTextfield.placeholder = "YOUR_PASSWORD".localized()
         repeatpasswordTextfield.placeholder = "YOUR_PASSWORD".localized()
         savechangesButton.setTitle("SAVE_CHANGES".localized(), for: .normal)
+        
+        passwordTextfield.layer.cornerRadius = 12.0
+        passwordTextfield.layer.borderWidth = 1.0
+        passwordTextfield.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+        
+        repeatpasswordTextfield.layer.cornerRadius = 12.0
+        repeatpasswordTextfield.layer.borderWidth = 1.0
+        repeatpasswordTextfield.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
     }
     
@@ -87,6 +95,16 @@ class ChangePasswordViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
  
     }
+    
+    @IBAction func textFieldDidBegin(_ sender: TextFieldWithPadding) {
+        sender.layer.borderColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00).cgColor
+    }
+    
+    
+    @IBAction func textFieldDidEnd(_ sender: TextFieldWithPadding) {
+        sender.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+    }
+    
     
     /*
     // MARK: - Navigation

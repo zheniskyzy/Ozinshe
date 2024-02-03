@@ -39,3 +39,15 @@
 "SEARCH_RESULT" = "Результаты поиска";
 "FAVORITE" = "Избранное";
 "SKIP" = "Пропустить";
+"CONTINUE_WATCHING" = "Продолжить просмотр";
+"APPROPIATE_FOR_AGE" = "Соответствует возрасту";
+"CHOOSE_A_GENRE" = "Выберите жанр";
+"MORE" = "Все";
+"ADD_TO_FAVORITE" = "Добавить в избранное";
+"SHARE" = "Поделиться";
+"READ_MORE" = "Подробнее";
+"DIRECTOR" = "Режиссер";
+"PRODUCER" = "Продюсер";
+"DEPARTMENTS" = "Разделы";
+"SCREENSHOTS" = "Скриншоты";
+"SIMILAR_TV" = "Похожие сериалы";

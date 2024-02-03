@@ -15,6 +15,12 @@ class TabBarController: UITabBarController {
         // Do any additional setup after loading the view.
         setTabImages()
     }
+    //добавляется когда нам надо обновить цвета 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setTabImages()
+    }
+    
     func setTabImages(){
         let homeselectedimage = UIImage(named: "HomeSelected")!.withRenderingMode(.alwaysOriginal)
         let searchselectedimage = UIImage(named: "SearchSelected")!.withRenderingMode(.alwaysOriginal)

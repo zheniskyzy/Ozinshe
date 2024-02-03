@@ -23,8 +23,12 @@ class HistoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        configureView()
       
         
+    }
+    override func prepareForReuse() {
+        configureView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,7 +37,11 @@ class HistoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         // Configure the view for the selected state
         
     }
-
+    
+    func configureView(){
+        titleLabel.text = "CONTINUE_WATCHING".localized()
+    }
+    
     func setData(mainMovie: MainMovies){
         self.mainMovies = mainMovie
         collectionView.reloadData()
