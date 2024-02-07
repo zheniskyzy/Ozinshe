@@ -8,11 +8,14 @@
 import UIKit
 import SDWebImage
 
+
 class GenreAgeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     var mainMovies = MainMovies()
+    var delegate : MovieProtocol?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,7 +47,6 @@ class GenreAgeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
         }else{
             titleLabel.text = "CHOOSE_A_GENRE".localized()
         }
-        
     }
     
     //MARK: - collectionView
@@ -79,5 +81,15 @@ class GenreAgeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
     }
     
     
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        if mainMovies.cellType == .genre{
+            delegate?.genreDidSelect(genreId: mainMovies.genres[indexPath.row].id, genreName: mainMovies.genres[indexPath.row].name)
+        }else{
+            delegate?.ageCategoryDidSelect(categoryAgeId: mainMovies.categoryAges[indexPath.row].id)
+        }
+       
+    }
+    
 }

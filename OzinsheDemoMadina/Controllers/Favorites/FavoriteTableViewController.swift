@@ -32,6 +32,9 @@ class FavoriteTableViewController: UITableViewController {
     }
     
     func downloadFavorites(){
+        
+        self.favorites.removeAll()
+        
         SVProgressHUD.show()
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(Storage.sharedInstance.accessToken)"

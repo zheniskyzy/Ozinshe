@@ -38,7 +38,7 @@ class MovieInfoViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var similarTVLabel: UILabel!
     
-    
+
     var movie = Movie()
     var similarMovies: [Movie] = []
     
@@ -84,7 +84,7 @@ class MovieInfoViewController: UIViewController, UICollectionViewDelegate, UICol
         
         // изначально что бы было 4 линии
         descriptionLabel.numberOfLines = 4
-        
+       
         screenshotCollectionView.dataSource = self
         screenshotCollectionView.delegate = self
         

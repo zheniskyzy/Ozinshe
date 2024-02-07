@@ -25,4 +25,5 @@ class Urls{
     static let GET_AGES_URL = BASE_URL + "category-ages"
     static let GET_SIMILAR = BASE_URL + "movies/similar/"
     static let GET_SEASONS = BASE_URL + "seasons/"
+    
 }

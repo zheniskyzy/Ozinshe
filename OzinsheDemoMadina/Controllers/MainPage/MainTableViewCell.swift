@@ -8,6 +8,12 @@
 import UIKit
 import SDWebImage
 
+protocol MovieProtocol {
+    func movieDidSelect(movie: Movie)
+    func genreDidSelect(genreId: Int, genreName: String)
+    func ageCategoryDidSelect(categoryAgeId: Int)
+}
+
 class TopAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributes = super.layoutAttributesForElements(in: rect)?
@@ -41,6 +47,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     @IBOutlet weak var moreLabel: UILabel!
     
+    var delegate : MovieProtocol?
     var mainMovie = MainMovies()
     
     override func awakeFromNib() {
@@ -119,8 +126,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-       
-    
+        delegate?.movieDidSelect(movie: mainMovie.movies[indexPath.row])
     }
     
     

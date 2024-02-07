@@ -83,14 +83,12 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         layout.minimumLineSpacing = 16
         layout.estimatedItemSize.width = 100
         collectionView.collectionViewLayout = layout
+        collectionView.layer.cornerRadius = 8.0
         
         //searchTextField
         searchTextField.padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16);
         searchTextField.layer.cornerRadius = 12.0
         searchTextField.layer.borderWidth = 1.0
-        searchTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
-        
-        //tableView
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -99,6 +97,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
            tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
         
     }
+    
     
     @IBAction func textFieldEditingDidBegin(_ sender: TextFieldWithPadding) {
         sender.layer.borderColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00).cgColor
@@ -243,6 +242,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        cell.layer.cornerRadius = 8.0
         let label = cell.viewWithTag(1001) as! UILabel
         label.text = categories[indexPath.row].name
         

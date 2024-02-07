@@ -9,12 +9,11 @@ import UIKit
 import Localize_Swift
 
 class ProfileViewController: UIViewController, LanguageProtocol{
-
-    @IBOutlet weak var myProfileLabel: UILabel!
     
+    @IBOutlet weak var `switch`: UISwitch!
+    @IBOutlet weak var myProfileLabel: UILabel!
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var languageLabel: UILabel!
-    
     @IBOutlet weak var personalInfoButtton: UIButton!
     @IBOutlet weak var changeLabel: UILabel!
     @IBOutlet weak var changePasswordButton: UIButton!
@@ -31,6 +30,9 @@ class ProfileViewController: UIViewController, LanguageProtocol{
         if let email = UserDefaults.standard.string(forKey: "email"){
             myEmailLabel.text = email
         }
+        
+        
+      
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +71,12 @@ class ProfileViewController: UIViewController, LanguageProtocol{
         
     }
     
+    @IBAction func switchTheme(_ sender: UISwitch) {
+        if let window = view.window {
+            window.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
+        }
+    }
+    
     @IBAction func languageShow(_ sender: Any) {
         let languageVC = storyboard?.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         languageVC.modalPresentationStyle = .overFullScreen
@@ -76,6 +84,7 @@ class ProfileViewController: UIViewController, LanguageProtocol{
         present(languageVC, animated: true,completion: nil)
     }
     
+
     @IBAction func Exist(_ sender: Any) {
         let existVC = storyboard?.instantiateViewController(withIdentifier: "ExistViewController") as! ExistViewController
         existVC.modalPresentationStyle = .overFullScreen

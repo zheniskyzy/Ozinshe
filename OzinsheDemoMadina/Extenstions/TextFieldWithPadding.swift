@@ -19,4 +19,13 @@ class TextFieldWithPadding: UITextField{
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        if traitCollection.userInterfaceStyle == .dark {
+            self.layer.borderColor = UIColor(red: 0.22, green: 0.25, blue: 0.32, alpha: 1.00).cgColor
+        } else {
+            self.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+        }
+    }
 }

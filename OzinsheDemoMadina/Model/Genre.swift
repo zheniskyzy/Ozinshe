@@ -13,6 +13,10 @@ class Genre{
     public var name: String = ""
     public var link: String = ""
     
+    init(){
+        
+    }
+    
     init(json: JSON){
         if let temp = json["id"].int {
             self.id = temp

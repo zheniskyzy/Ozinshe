@@ -243,7 +243,6 @@
 				D4D3DC8B2B4C775F00CCCAA8 /* Fonts */,
 				D4D3DC942B4C835700CCCAA8 /* Controllers */,
 				D434B3D82B581B88002D908A /* Extenstions */,
-				D434B3E12B5875EE002D908A /* Static */,
 				D434B3E42B587D69002D908A /* SharedInstance */,
 				D49127FD2B4BDFEA007AF1A3 /* AppDelegate.swift */,
 				D49127FF2B4BDFEA007AF1A3 /* SceneDelegate.swift */,
@@ -303,6 +302,7 @@
 			children = (
 				D4DC7BE92B5C563900E5EC7A /* SearchViewController.swift */,
 				D4DC7BEB2B5C716800E5EC7A /* CategoryTableViewController.swift */,
+				D434B3E12B5875EE002D908A /* Static */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -315,9 +315,9 @@
 				D4EA1B842B58DD27004DD712 /* CategoryAge.swift */,
 				D4EA1B862B58DD35004DD712 /* Genre.swift */,
 				D4EA1B882B58DD45004DD712 /* Category.swift */,
-				D43F53FC2B6CB8C4008F46CD /* Season.swift */,
 				D4AC32F02B5F13EA007775FA /* MainMovies.swift */,
 				D444C58E2B61A60C003EEB30 /* BannerMovie.swift */,
+				D43F53FC2B6CB8C4008F46CD /* Season.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

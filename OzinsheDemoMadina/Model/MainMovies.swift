@@ -20,7 +20,10 @@ enum CellType{
 class MainMovies{
     var categoryId = 0
     var categoryName = ""
+    var genreId = 0
+    var genreName = ""
     var movies: [Movie] = []
+    
     var bannerMovie: [BannerMovie] = []
     var cellType: CellType = .mainMovie
     var categoryAges:[CategoryAge] = []
